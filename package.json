@@ -1,15 +1,20 @@
 {
   "name": "marks",
   "version": "1.0.0",
+  "private": "true",
   "description": "This is an exam management information system",
   "main": "app.js",
+  "engines": {
+    "node": "14.0.0"
+  },
   "scripts": {
-    "start": "nodemon app",
+    "dev": "nodemon app",
+    "start": "node app",
     "test": "start test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AidenWebSploit"
+    "url": "https://github.com/AidenWebSploit/exams-system"
   },
   "keywords": [
     "Exam",
