@@ -1,0 +1,60 @@
+<%- include('./partials/header') -%>
+  <div class="container-fluid">
+    <%- include('./partials/messages') -%>
+
+      <table class="table table-stripped w-80 mx-auto">
+        <thead>
+          <tr>
+            <th scope="col">Admission</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Grade</th>
+            <th scope="col">Age</th>
+            <th scope="col">Class</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% students.forEach((student)=> { %>
+            <tr>
+              <th>
+                <%= student.admission %>
+              </th>
+              <td>
+                <%= student.first_name %>
+              </td>
+              <td>
+                <%= student.last_name %>
+              </td>
+              <td>
+                <%= student.gender %>
+              </td>
+              <td>
+                <%= student.grade %>
+              </td>
+              <td>
+                <%= student.age %>
+              </td>
+              <td>
+                <%= student.class %>
+              </td>
+              <td>
+                <a href="/students/<%= student.admission %>/view" class="btn btn-sm btn-outline-primary"
+                  role="button">View</a>
+
+                <a href="#" class="btn btn-sm btn-outline-success" role="button">Edit</a>
+
+                <form method="POST" action="/students/<%= student.admission %>" ?_method=DELETE " enctype="
+                  application/x-www-form-urlencoded" style=" display:inline">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button style="cursor: pointer;" type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                </form>
+
+              </td>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+  </div>
+  <%- include('./partials/footer') %>

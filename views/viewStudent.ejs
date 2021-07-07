@@ -1,0 +1,120 @@
+<%- include('./partials/header') -%>
+  <div class="container-fluid">
+    <%- include('./partials/messages') -%>
+
+      <table class="table table-striped w-50 mx-auto">
+        <thead>
+          <tr>
+            <th colspan=2>Student Details</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>Admission Number</td>
+            <td>
+              <%= std.admission %>
+            </td>
+          </tr>
+          <tr>
+            <td>First Name</td>
+            <td>
+              <%= std.first_name %>
+            </td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>
+              <%= std.last_name %>
+            </td>
+          </tr>
+          <tr>
+            <td>Gender </td>
+            <td>
+              <%= std.gender %>
+            </td>
+          </tr>
+          <tr>
+            <td>Grade</td>
+            <td>
+              <%= std.grade %>
+            </td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>
+              <%= std.age %>
+            </td>
+          </tr>
+          <tr>
+            <td>Class</td>
+            <td>
+              <%= std.class %>
+            </td>
+          </tr>
+          <tr>
+            <td>English</td>
+            <td>
+              <%= std.english %>
+            </td>
+          </tr>
+          <tr>
+            <td>Maths</td>
+            <td>
+              <%= std.maths %>
+            </td>
+          </tr>
+          <tr>
+            <td>Kiswahili</td>
+            <td>
+              <%= std.kiswahili %>
+            </td>
+          </tr>
+          <tr>
+            <td>Biology</td>
+            <td>
+              <%= std.biology %>
+            </td>
+          </tr>
+          <tr>
+            <td>Chemistry</td>
+            <td>
+              <%= std.chemistry %>
+            </td>
+          </tr>
+          <tr>
+            <td>Physics</td>
+            <td>
+              <%= std.physics %>
+            </td>
+          </tr>
+          <tr>
+            <td>Business Studies</td>
+            <td>
+              <%= std.business %>
+            </td>
+          </tr>
+          <tr>
+            <td>Computer Studies</td>
+            <td>
+              <%= std.computer %>
+            </td>
+          </tr>
+          <tr>
+            <td>Agriculture</td>
+            <td>
+              <%= std.agriculture %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="/students" class="btn-block btn-sm btn-success" role="button">Back</a>
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+  </div>
+  <%- include('./partials/footer') %>

@@ -1,0 +1,143 @@
+<%- include('./partials/header') -%>
+  <div class="container mt-3">
+    <%- include('./partials/messages') -%>
+
+      <form action="/students/new" name="studentData" method="post">
+
+        <fieldset class="form-group border p-3">
+          <legend class="me-auto px-2">Student Personal Information</legend>
+          <div class="row mb-3">
+            <label for="admission" class="col-sm-2 col-form-label">Admission Number : </label>
+            <div class="col-sm-10">
+              <input type="text" id="admission" name="admission" class="form-control" placeholder="Enter Admission">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="first_name" class="col-sm-2 col-form-label">First Name : </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter first name">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="last_name" class="col-sm-2 col-form-label">Last Name : </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter last name">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="age" class="col-sm-2 col-form-label">Age : </label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="age" name="age" placeholder="Enter age">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="grade" class="col-sm-2 col-form-label">Grade : </label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="grade" name="grade" placeholder="Enter Grade ">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="class" id="form1" value="Form 1">
+              <label class="form-check-label" for="form1">Form 1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="class" id="form2" value="Form 2">
+              <label class="form-check-label" for="form2">Form 2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="class" id="form3" value="Form 3">
+              <label class="form-check-label" for="form3">Form 3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="class" id="form4" value="Form 4">
+              <label class="form-check-label" for="form4">Form 4</label>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <fieldset class="form-group border p-3">
+          <legend class="me-auto px-2">Student - Academic Information</legend>
+          <div class="row mb-3">
+            <label for="english" class="col-sm-2 col-form-label">English : </label>
+            <div class="col-sm-10">
+              <input type="number" id="english" name="english" class="form-control" placeholder="English">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="maths" class="col-sm-2 col-form-label">Math : </label>
+            <div class="col-sm-10">
+              <input type="number" id="maths" name="maths" class="form-control" placeholder="Math">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="kiswahili" class="col-sm-2 col-form-label">Kiswahili : </label>
+            <div class="col-sm-10">
+              <input type="number" id="kiswahili" name="kiswahili" class="form-control" placeholder="Kiswahili">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="biology" class="col-sm-2 col-form-label">Biology : </label>
+            <div class="col-sm-10">
+              <input type="number" id="biology" name="biology" class="form-control" placeholder="Biology">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="physics" class="col-sm-2 col-form-label">Physics : </label>
+            <div class="col-sm-10">
+              <input type="number" id="physics" name="physics" class="form-control" placeholder="Physics">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="chemistry" class="col-sm-2 col-form-label">Chemistry : </label>
+            <div class="col-sm-10">
+              <input type="number" id="chemistry" name="chemistry" class="form-control" placeholder="Chemistry">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="business" class="col-sm-2 col-form-label">Business Studies : </label>
+            <div class="col-sm-10">
+              <input type="number" id="business" name="business" class="form-control" placeholder="Business Studies">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="computer" class="col-sm-2 col-form-label">Computer Studies : </label>
+            <div class="col-sm-10">
+              <input type="number" id="computer" name="computer" class="form-control" placeholder="Computer Studies">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="agriculture" class="col-sm-2 col-form-label">Agriculture : </label>
+            <div class="col-sm-10">
+              <input type="number" id="agriculture" name="agriculture" class="form-control" placeholder="Agriculture">
+            </div>
+          </div>
+
+
+        </fieldset>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-5">
+          <a href="/students" class="btn btn-primary me-md-2" type="button">Back</a>
+          <button class="btn btn-primary" type="submit">Create New student</button>
+        </div>
+      </form>
+
+  </div>
+  <%- include('./partials/footer') %>
