@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
-const session = require('express-session');
 const methodOverride = require('method-override');
 
 //Routes
@@ -37,11 +36,6 @@ app.use(express.urlencoded({ extended: true }));
 
 
 //Express session middleware
-app.use(session({
-  secret: 'employed',
-  resave: true,
-  saveUninitialized: true
-}));
 
 //Connect flash middleware
 app.use(flash())
