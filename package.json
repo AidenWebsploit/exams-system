@@ -5,7 +5,7 @@
   "description": "This is an exam management information system",
   "main": "app.js",
   "engines": {
-    "node": "14.0.0"
+    "node": "15.0.0"
   },
   "scripts": {
     "dev": "nodemon app",
@@ -26,10 +26,10 @@
   "license": "MIT",
   "dependencies": {
     "connect-flash": "^0.1.1",
+    "cookie-session": "^1.4.0",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-session": "^1.17.2",
     "method-override": "^3.0.0",
     "mongoose": "^5.13.2",
     "path": "^0.12.7"

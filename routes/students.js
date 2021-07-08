@@ -6,7 +6,7 @@ const router = express.Router();
 
 //Home for Students
 router.get('/students', (req, res) => {
-  title = "Edulink | Students"
+  title = "Concordia | Students"
   Students.find({})
     .then(students => {
       res.render('stats', { title, students })
@@ -19,7 +19,7 @@ router.get('/students', (req, res) => {
 
 //Add new student - GET
 router.get('/students/new', (req, res) => {
-  title = 'Edulinks | New Student'
+  title = 'Concordia | New Student'
   res.render('newStudent', { title });
 })
 
@@ -39,7 +39,7 @@ router.post('/students/new', (req, res) => {
 
 // Add new Student - GET by Id
 router.get('/students/:id/view', (req, res) => {
-  title = 'Edulinks | Student Details'
+  title = 'Concordia | Student Details'
   const searchQuery = { admission: req.params.id };
   Students.findOne(searchQuery)
     .then(std => {
@@ -67,6 +67,11 @@ router.delete('/students/:id', (req, res) => {
       req.flash('error_msg', 'ERROR : ' + err);
       res.redirect('/')
     })
+})
+
+router.get('/grading', (req, res)=>{
+  title = "Concordia | Grading ";
+  res.render('grade', { title });
 })
 
 module.exports = router;

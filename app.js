@@ -3,6 +3,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const methodOverride = require('method-override');
+const session = require('cookie-session');
 
 //Routes
 const studentsRoutes = require('./routes/students')
@@ -34,8 +35,25 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
 
+//Express session middleware - Memory unleaked
+app.set('trust proxy', 1);
+app.use(session({
+  cookie: {
+    secure: true,
+    maxAge: 60000
+  },
+  // store: new RedisStore('secret'),
+  secret: 'secret',
+  saveUninitialized: true,
+  resave: false
+}));
 
-//Express session middleware
+app.use(function (req, res, next) {
+  if (!req.session) {
+    return next(new Error('Oh no')) //handle error
+  }
+  next() //otherwise continue
+});
 
 //Connect flash middleware
 app.use(flash())
